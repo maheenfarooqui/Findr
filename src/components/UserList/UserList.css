@@ -1,0 +1,51 @@
+.user-list-container {
+  padding: 20px 0;
+}
+
+.user-grid {
+  display: grid;
+  /* Desktop par 3 cards, tablet par 2, mobile par 1 */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  justify-content: center;
+}
+
+.loader, .error-msg {
+  text-align: center;
+  padding: 50px;
+  font-size: 1.2rem;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.error-msg {
+  color: #ef4444;
+}
+.user-list-container {
+  width: 100%;
+  max-width: 1200px; /* Container ko limit karein */
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.user-grid {
+  display: grid;
+  /* Desktop par fixed 3 columns */
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 30px; /* Cards ke darmiyan gap */
+  justify-content: center;
+}
+
+/* Tablet ke liye (2 cards) */
+@media screen and (max-width: 1024px) {
+  .user-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile ke liye (1 card) */
+@media screen and (max-width: 600px) {
+  .user-grid {
+    grid-template-columns: 1fr;
+  }
+}

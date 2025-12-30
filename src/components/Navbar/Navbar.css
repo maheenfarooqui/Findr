@@ -1,0 +1,65 @@
+.navbar {
+  background-color: var(--card);
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  border-bottom: 1px solid #e2e8f0; /* halki si line separation ke liye */
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.navbar-logo{
+  width: 250px;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav-links li {
+  color: var(--text);
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-links li:hover {
+  color: var(--primary);
+}
+.nav-fav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.count-badge {
+  background-color: #ef4444; /* Red color */
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+/* Mobile responsive ke liye choti si tip */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none; /* Mobile par filhal links hide kar dete hain simplicity ke liye */
+  }
+}
